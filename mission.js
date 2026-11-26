@@ -10,7 +10,7 @@ if (atlas) {
       const active = i === selected;
       tab.tabIndex = active ? 0 : -1;
       tab.setAttribute('aria-selected', String(active));
-      pages[i].hidden = !active;
+      pages[i].inert = !active;
       pages[i].classList.toggle('show-leaf', active);
     });
     if (moveFocus) tabs[selected].focus();
@@ -30,12 +30,11 @@ if (atlas) {
     });
   });
   let pointer = null;
-  const leaves = atlas.querySelector('.mission-leaves');
-  leaves.addEventListener('pointerdown', e => {
+  atlas.addEventListener('pointerdown', e => {
     if (e.pointerType === 'touch' && !e.target.closest('button')) pointer = {id:e.pointerId, x:e.clientX, y:e.clientY};
   });
-  leaves.addEventListener('pointercancel', () => { pointer = null; });
-  leaves.addEventListener('pointerup', e => {
+  atlas.addEventListener('pointercancel', () => { pointer = null; });
+  atlas.addEventListener('pointerup', e => {
     if (!pointer || pointer.id !== e.pointerId) return;
     const dx = e.clientX - pointer.x, dy = e.clientY - pointer.y;
     pointer = null;

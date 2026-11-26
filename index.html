@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f6f7f2">
   <title>Мироселье · Проектный офис сельских территорий Башкортостана</title>
   <link rel="stylesheet" href="design/atlas-office.css">
-  <link rel="stylesheet" href="mission.css">
-  <script defer src="mission.js"></script>
+  <link rel="stylesheet" href="mission.css?v=panorama">
+  <script defer src="mission.js?v=panorama"></script>
   <meta name="description" content="Миссия «Мироселья» — заселять мир. Развитие сельских территорий через новые возможности для земли, креативные индустрии и работу с молодым поколением.">
   <link rel="canonical" href="https://lignatus.github.io/miroselye/">
   <meta property="og:type" content="website">
@@ -40,32 +40,24 @@
         <h1 id="mission-title">Заселять <em>мир</em></h1>
         <p>Так мы понимаем имя «Мироселье». Мы создали проектный офис, чтобы у людей было больше причин жить в селе, возвращаться домой и начинать здесь своё дело. Мы ищем, как лучше использовать землю и вернуть к жизни пустующие здания. Для этого объединяем опыт фермеров и мастеров с идеями молодого поколения.</p>
       </div>
-      <div class="mission-atlas" data-mission>
-        <div class="mission-globe">
-          <figure class="locator-plate">
-            <img src="assets/bashkortostan-globe.webp" width="1200" height="660" alt="Карта Башкортостана. Чишмы отмечены в западной части республики.">
-            <a class="locator-town" href="territory.html" aria-label="Чишмы, открыть проект на территории">Чишмы</a>
-            <figcaption><small>Республика</small><strong>Башкортостан</strong></figcaption>
-          </figure>
+      <div class="mission-panorama" data-mission>
+        <div class="foldout">
+          <img src="design/fields-panorama.webp" alt="Река среди полей и лесополос. На пригорке видны фермерские постройки." width="1672" height="341" fetchpriority="high">
+          <span class="folds" aria-hidden="true"></span>
         </div>
         <div class="mission-leaves">
-          <div class="mission-choices" hidden aria-label="Подход Мироселья">
+          <div class="mission-choices" hidden aria-label="Ценности Мироселья">
             <button id="tab-earth" aria-controls="leaf-earth" type="button">Земля</button>
             <button id="tab-craft" aria-controls="leaf-craft" type="button">Творчество</button>
             <button id="tab-youth" aria-controls="leaf-youth" type="button">Молодёжь</button>
           </div>
-          <article id="leaf-earth"><h2>В чём ценность земли</h2><p>Ценность земли связана с тем, что на ней можно вырастить, построить или сохранить. Когда из местного урожая делают готовый продукт здесь же, в селе остаётся больше работы и дохода. Вместе с жителями и предпринимателями мы ищем такие возможности, чтобы повысить инвестиционную привлекательность территории.</p></article>
-          <article id="leaf-craft"><h2>Креативные индустрии на селе</h2><p>У фермера есть продукт и знание своей земли. Дизайнер может помочь ему представить этот продукт покупателям, а ремесленник придумать, что сделать из местного сырья. Так к сельскому хозяйству добавляются новые профессии, у людей появляется больше способов зарабатывать дома.</p></article>
-          <article id="leaf-youth"><h2>Как найти своё дело рядом с домом</h2><p>Работая с молодёжью, мы начинаем с того, что ребятам интересно самим. Они могут начертить карту посёлка, предложить идею для хозяйства, обсудить её с фермером и посчитать затраты. Такой опыт помогает понять, где в родном районе пригодятся их способности.</p></article>
+          <div class="mission-pages">
+            <article id="leaf-earth"><h2>В чём ценность земли</h2><p>Ценность земли связана с тем, что на ней можно вырастить, построить или сохранить. Когда из местного урожая делают готовый продукт здесь же, в селе остаётся больше работы и дохода. Вместе с жителями и предпринимателями мы ищем такие возможности, чтобы повысить инвестиционную привлекательность территории.</p></article>
+            <article id="leaf-craft"><h2>Креативные индустрии на селе</h2><p>У фермера есть продукт и знание своей земли. Дизайнер может помочь ему представить этот продукт покупателям, а ремесленник придумать, что сделать из местного сырья. Так к сельскому хозяйству добавляются новые профессии, у людей появляется больше способов зарабатывать дома.</p></article>
+            <article id="leaf-youth"><h2>Как найти своё дело рядом с домом</h2><p>Работая с молодёжью, мы начинаем с того, что ребятам интересно самим. Они могут начертить карту посёлка, предложить идею для хозяйства, обсудить её с фермером и посчитать затраты. Такой опыт помогает понять, где в родном районе пригодятся их способности.</p></article>
+          </div>
         </div>
       </div>
-      <figure class="land">
-        <div class="foldout">
-          <img src="design/fields-panorama.webp" alt="Панорама полей и реки из концепции пилотной территории Чишминского района" width="1672" height="341" fetchpriority="high">
-          <span class="folds" aria-hidden="true"></span>
-        </div>
-        <figcaption><span>Республика Башкортостан</span><div><small>Первый пример</small><b>Чишмы</b></div><a href="territory.html">Проект в Чишмах <span aria-hidden="true">↗</span></a></figcaption>
-      </figure>
     </section>
     <section id="projects" class="projects page-section">
       <div class="section-line"><h2>Проекты</h2><p>Аграрная практика, образование и работа с жителями</p></div>

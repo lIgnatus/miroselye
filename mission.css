@@ -1,45 +1,57 @@
-/* A leaf in the atlas pairs a globe with the three parts of the mission. */
 .mission-heading { align-items:center; padding-block:clamp(25px,3.5vw,52px); }
 .mission-heading h1 { grid-row:auto; }
 .mission-heading p { max-width:62ch; }
-.mission-atlas { display:grid; grid-template-columns:minmax(255px,.86fr) minmax(0,1.4fr); color:#f9faee; background:#1e348c; margin-bottom:18px; overflow:hidden; }
-.mission-globe {
-  display:grid; place-items:center; overflow:hidden; background:#f2f3e8;
+
+.mission-panorama {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) clamp(340px,33%,440px);
+  color:#fffef7;
+  background:var(--blue);
 }
-.locator-plate { width:100%; position:relative; color:#1f342e; }
-.locator-plate img { width:100%; height:auto; }
-.locator-plate figcaption { position:absolute; left:4.8%; bottom:6.5%; }
-.locator-plate small { display:block; font:500 11px/1.45 var(--sans); letter-spacing:.02em; }
-.locator-plate strong { display:block; font:530 clamp(20px,2.15vw,32px)/1.08 var(--serif); letter-spacing:-.045em; }
-.locator-town { position:absolute; left:56.68%; top:38.96%; transform:translateX(-50%); padding:8px 3px; font:570 clamp(12px,1vw,15px)/1 var(--sans); color:white; text-decoration:underline; text-underline-offset:3px; text-decoration-color:#c2dbef; }
-.locator-town:hover { text-decoration-thickness:2px; }
-.mission-globe .locator-town:focus-visible { outline:2px solid white; outline-offset:0; }
-.mission-leaves { padding:clamp(20px,2.5vw,36px) clamp(20px,3vw,50px); align-self:center; min-width:0; }
-.mission-choices { display:flex; flex-wrap:wrap; align-items:center; column-gap:clamp(14px,2vw,28px); border-bottom:1px solid #8997c8; margin-bottom:17px; }
-.mission-choices[hidden],.mission-leaves article[hidden] { display:none; }
-.mission-choices button { appearance:none; border:0; border-bottom:3px solid transparent; border-radius:0; background:none; padding:5px 2px 8px; color:#e6ebff; font:500 14px/1.25 var(--sans); cursor:pointer; }
-.mission-choices button[aria-selected=true] { color:#efffad; border-color:#e3f7a4; }
+.mission-panorama .foldout { height:auto; min-height:240px; overflow:hidden; }
+.mission-panorama .foldout img { position:absolute; inset:0; object-position:62% center; }
+.mission-panorama[data-ready] { touch-action:pan-y pinch-zoom; }
+.mission-leaves { min-width:0; padding:clamp(18px,2vw,28px); }
+.mission-choices { display:flex; align-items:center; gap:clamp(12px,1.4vw,22px); border-bottom:1px solid #8393dc; margin-bottom:16px; }
+.mission-choices[hidden] { display:none; }
+.mission-choices button {
+  appearance:none;
+  background:none;
+  border:0;
+  border-bottom:3px solid transparent;
+  border-radius:0;
+  color:#f2f4ff;
+  padding:8px 0 7px;
+  min-height:40px;
+  font:500 14px/1.25 var(--sans);
+  cursor:pointer;
+}
+.mission-choices button[aria-selected=true] { color:#efffad; border-bottom-color:currentColor; }
 .mission-choices button:hover { text-decoration:underline; text-underline-offset:4px; }
-.mission-atlas :focus-visible { outline:2px solid #efffad; outline-offset:3px; }
-.mission-leaves h2 { color:#fffef7; font-size:clamp(23px,2.3vw,34px); letter-spacing:-.025em; margin:0 0 8px; }
-.mission-leaves p { max-width:74ch; color:#f3f4ed; font-size:clamp(14px,1.09vw,16px); line-height:1.48; }
-.mission-leaves article + article { margin-top:16px; }
-.mission-atlas[data-ready] article { margin-top:0; }
-.mission-atlas[data-ready] .mission-leaves { touch-action:pan-y; }
+.mission-panorama :focus-visible { outline:2px solid #efffad; outline-offset:3px; }
+.mission-pages h2 { font-size:clamp(23px,2.15vw,32px); margin-bottom:8px; }
+.mission-pages p { font-size:14px; line-height:1.5; }
+.mission-pages article + article { margin-top:20px; }
+/* All panels contribute their height so switching values keeps the panorama still. */
+[data-ready] .mission-pages { display:grid; }
+[data-ready] .mission-pages article { grid-area:1 / 1; margin:0; }
+.mission-pages article[inert] { visibility:hidden; }
+
 .urban-method-card img { object-fit:contain; background:#f6d550; }
 .field-program-card .project-info>span, .field-program-card .project-info i { color:#923d23; }
 .field-program-card img { object-position:center; }
-@media(max-width:660px) {
- .mission-heading p { margin-bottom:0; }
- .mission-atlas { grid-template-columns:minmax(0,1fr); margin-bottom:14px; }
- .locator-plate { max-width:480px; }
- .mission-leaves { padding:12px 16px 20px; }
- .mission-choices { column-gap:16px; margin-bottom:14px; }
- .mission-choices button { font-size:13px; min-height:40px; }
- .mission-leaves h2 { font-size:24px; }
- .mission-leaves p { font-size:14px; }
+
+@media(max-width:700px) {
+  .mission-heading p { margin-bottom:0; }
+  .mission-panorama { grid-template-columns:minmax(0,1fr); }
+  .mission-panorama .foldout { height:clamp(125px,33vw,215px); min-height:0; }
+  .mission-panorama .foldout img { object-position:62% center; }
+  .mission-leaves { padding:8px 16px 22px; }
+  .mission-choices { gap:18px; margin-bottom:14px; }
+  .mission-choices button { font-size:13px; min-height:44px; }
+  .mission-pages h2 { font-size:24px; }
 }
 @media(prefers-reduced-motion:no-preference) {
- .mission-leaves article.show-leaf { animation:open-leaf .22s ease-out; }
- @keyframes open-leaf { from{opacity:.65;transform:translateX(4px)} to{opacity:1;transform:translateX(0)} }
+  .mission-pages article.show-leaf { animation:open-leaf .2s ease-out; }
+  @keyframes open-leaf { from { opacity:.65; transform:translateX(4px); } to { opacity:1; transform:translateX(0); } }
 }
