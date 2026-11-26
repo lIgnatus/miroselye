@@ -1,97 +1,94 @@
 <!doctype html>
-
 <html lang="ru">
-
 <head>
-
   <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="theme-color" content="#f5f3e8">
-
-  <title>Мироселье | Сельские проекты в Башкортостане</title>
-
-  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="land.css">
-
-  <script defer src="site.js"></script>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>Мироселье · Проектный офис сельских территорий Башкортостана</title>
+  <link rel="stylesheet" href="design/atlas-office.css">
+  <meta name="description" content="ООО «Мироселье» разрабатывает проекты для сельских территорий Башкортостана. Центр агрокреаномики в Верхних Термах, молодёжная программа в Чишмах и Урбаншкола.">
+  <link rel="canonical" href="https://lignatus.github.io/miroselye/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Мироселье · Проектный офис сельских территорий">
+  <meta property="og:description" content="Сельские территории Башкортостана. Идеи, люди и проекты Чишминского района.">
+  <meta property="og:image" content="https://lignatus.github.io/miroselye/design/fields-sunset.webp">
+  <script>
+    function openPreviousSection() {
+      const target = window.location.hash;
+      if (['#participate', '#schools', '#farmers', '#partners'].includes(target)) {
+        window.location.replace('program.html' + target);
+      } else if (target === '#materials') {
+        window.location.replace('#library');
+      }
+    }
+    openPreviousSection();
+    window.addEventListener('hashchange', openPreviousSection);
+  </script>
 </head>
-
 <body id="top">
-
-  <a class="skip" href="#main">К содержанию</a>
-
-  <header class="mast wrap">
-
-    <a class="brand" href="#top" aria-label="Мироселье, на главную"><span class="sign" aria-hidden="true"></span><span>Сельские проекты<br>в Башкортостане</span></a>
-
-    <nav aria-label="Основная навигация"><a href="#company">О компании</a><a href="#projects">Проекты</a><a href="#materials">Материалы</a></nav>
-
-    <a class="nav-action" href="#participate">Как участвовать <span aria-hidden="true">↘</span></a>
-
-    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">Меню <span aria-hidden="true">≡</span></button>
-
+  <a href="#mission" class="skip">Перейти к содержанию</a>
+  <header class="mast">
+    <a href="#top" class="wordmark">Мироселье</a>
+    <nav aria-label="Разделы проектного офиса"><a href="#mission">Миссия</a><a href="#projects">Проекты</a><a href="#team">Команда</a><a href="#library">Материалы</a><a href="#company">О компании</a></nav>
   </header>
-
-  <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Мобильная навигация" hidden><a href="#company">О компании</a><a href="#projects">Проекты</a><a href="#materials">Материалы</a><a href="#participate">Как участвовать</a></nav>
-
-  <main id="main">
-
-    <section class="landhero wrap">
-<div class="land-intro"><h1>Мироселье</h1><p>Развитие сельских территорий Башкортостана</p></div>
-<div class="land-picture"><img src="assets/school-landscape.webp" alt="Здание бывшей школы и двор в Верхних Термах"><div class="land-story"><h2>Что может появиться на месте бывшей школы?</h2><a href="territory.html">Верхние Термы. Замысел центра ↗</a></div></div>
-</section>
-<section id="company" class="wrap about spread"><h2>Ценность земли</h2><div><p class="standfirst">Будущее села зависит в том числе от того, какое дело здесь можно начать и кто захочет его продолжить.</p><p>ООО «Мироселье» разрабатывает проекты для сельских территорий. Начинаем в Чишминском районе. Здесь у фермеров есть опыт работы на земле, у молодёжи есть идеи, а в Верхних Термах сохранилась школа, для которой можно найти новое применение.</p><p>Мы предлагаем открыть в бывшей школе мастерские. Здесь фермер мог бы показать, как устроено его хозяйство, а молодая команда вместе с ним проверить идею продукта или услуги. Так у здания появятся люди, которые в нём нуждаются, а у жителей района ещё одно место для учёбы и работы.</p></div></section>
-<section id="projects" class="projects">
-
-      <div class="wrap"><h2>Проекты</h2>
-
-      <div class="project-list"><a class="project-row" href="urbanschool.html"><span class="kind">Образование и участие жителей</span><span class="project-name">Урбаншкола</span><span class="circle-arr" aria-hidden="true">↗</span></a>
-
-        <a class="project-row" href="program.html"><span class="kind">Программа на 2027 год</span><span class="project-name">Башкирское поле<br>экспериментов</span><span class="circle-arr" aria-hidden="true">↗</span></a>
-
-        <a class="project-row" href="territory.html"><span class="kind">Концепция территории</span><span class="project-name">Центр агрокреаномики<br>«Дом фермера»</span><span class="circle-arr" aria-hidden="true">↗</span></a>
-
-      </div></div>
-
-    </section>
-
-    <section id="participate" class="wrap spread participate">
-
-      <div><h2>Как участвовать</h2><p>Программа в разработке. Выберите свою роль, чтобы узнать, какое участие мы предлагаем.</p></div>
-
-      <div class="roles">
-
-        <details id="schools"><summary>Школам <span aria-hidden="true"></span></summary><div><p>В апреле и мае 2027 года пройдут четыре вводные встречи в одной школе посёлка Чишмы. Из 200 школьников 14–17 лет отберём 30 заинтересованных ребят. В шести командах они выберут свои темы, освоят методы исследования и составят планы собственных проектов.</p><a class="text-link" href="program.html#route">Посмотреть путь школьной команды <span aria-hidden="true">↗</span></a></div></details>
-
-        <details id="farmers"><summary>Аграриям <span aria-hidden="true"></span></summary><div><p>Хозяйство может принять ребят на выезде. Знакомство с производством, продажей продукции и повседневной работой даст школьникам материал для собственных вопросов. На 8 октября в Уфе запланирована Первая конференция по агрокреаномике Республики Башкортостан.</p><a class="text-link" href="program.html#forum">О конференции <span aria-hidden="true">↗</span></a></div></details>
-
-        <details id="partners"><summary>Партнёрам <span aria-hidden="true"></span></summary><div><p>Вузы, технологические компании и эксперты могут предложить наставника, практикум или встречу с разработчиками. В концепции центра предусмотрено место для учебной и проектной работы.</p><a class="text-link" href="territory.html#idea">Изучить концепцию центра <span aria-hidden="true">↗</span></a></div></details>
-
+  <main>
+    <section class="cover" id="mission" aria-labelledby="mission-title">
+      <div class="cover-copy">
+        <h1 id="mission-title">Проектный офис<br><em>сельских территорий</em></h1>
+        <p>Мы хотим, чтобы жители села могли учиться, работать и начинать своё дело рядом с домом. В Чишминском районе мы предлагаем превратить бывшую школу в мастерские для фермеров и молодёжи.</p>
+        <a class="action" href="#projects">Посмотреть проекты <span aria-hidden="true">↓</span></a>
       </div>
-
+      <figure class="land">
+        <div class="foldout">
+          <img src="design/fields-panorama.webp" alt="Панорама полей и реки из концепции пилотной территории Чишминского района" width="1672" height="341" fetchpriority="high">
+          <span class="folds" aria-hidden="true"></span>
+        </div>
+        <figcaption><span>Республика Башкортостан</span><div><small>Пилотная территория</small><b>Чишмы</b></div><a href="territory.html">О территории <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
     </section>
-
-    <section id="materials" class="wrap spread materials">
-
-      <h2>Материалы</h2>
-
-      <div class="downloads"><a href="materials/annotation.pdf"><span>«Башкирское поле экспериментов» на одной странице</span><small>PDF ↗</small></a><a href="materials/presentation.pdf"><span>Презентация молодёжной программы</span><small>PDF ↗</small></a>
-
-        <a href="materials/programma.pdf"><span>Полное описание проекта «Башкирское поле экспериментов»</span><small>PDF&nbsp; ↗</small></a>
-
-        <a href="materials/koncepcia.pdf"><span>Концепция пилотной территории «Чишмы»</span><small>PDF&nbsp; ↗</small></a>
-
+    <section id="projects" class="projects page-section">
+      <div class="section-line"><h2>Проекты</h2><p>Аграрная практика, образование и работа с жителями</p></div>
+      <div class="project-grid">
+        <article class="project main-project">
+          <div class="project-info"><span class="project-location">Верхние Термы · Концепция</span><h3><a href="territory.html">Центр агрокреаномики</a></h3><p>Предлагаем открыть в бывшей школе мастерские. Здесь фермеры и молодые жители района смогут встречаться, обсуждать идеи и проверять их на практике.</p></div>
+          <fieldset class="school-view">
+            <legend class="sr-only">Вид бывшей школы в Верхних Термах</legend>
+            <input type="radio" id="school-photo" name="school-view" checked><label for="school-photo">Здание сегодня</label>
+            <input type="radio" id="school-design" name="school-view"><label for="school-design">Проектный эскиз</label>
+            <div class="school-images"><img class="actual" src="assets/school-facade.webp" alt="Фасад бывшей школы в Верхних Термах"><img class="proposal" src="assets/school-concept.webp" alt="Проектный эскиз центра в здании бывшей школы"></div>
+          </fieldset>
+          <a class="read-project" href="territory.html">Посмотреть концепцию <span aria-hidden="true">↗</span></a>
+        </article>
+        <div class="sibling-projects">
+          <a class="project side-project" href="program.html"><img src="assets/field.webp" alt=""><div class="project-info"><span>Чишмы · Проект для конкурса ПФКИ</span><h3>Башкирское поле экспериментов</h3><p>В программе молодые жители Чишмов смогут подготовить собственный бизнес-план или замысел исследования.</p><i aria-hidden="true">↗</i></div></a>
+          <a class="project side-project" href="urbanschool.html"><img src="assets/urban-game.webp" alt=""><div class="project-info"><span>Уфа · Практика в лицее № 136</span><h3>Урбаншкола</h3><p>Семиклассники уфимского лицея обсудили застройку Сипайлово в формате городских слушаний.</p><i aria-hidden="true">↗</i></div></a>
+        </div>
       </div>
-
     </section>
-
+    <section id="team" class="team page-section"><div class="section-line"><h2>Команда</h2><p>Пока представлены роли участников будущей команды.</p></div>
+      <div class="team-grid">
+        <article><h3>Руководитель проектов</h3><p>Собирает команду и ведёт проект от замысла до первых результатов.</p></article>
+        <article><h3>Исследователь территорий</h3><p>Изучает место и выясняет, что важно для его жителей.</p></article>
+        <article><h3>Куратор программ</h3><p>Готовит занятия и приглашает наставников для молодёжных команд.</p></article>
+      </div>
+    </section>
+    <section id="library" class="library page-section">
+      <div><h2>Материалы</h2><p>Концепция территории и документы молодёжной программы.</p></div>
+      <div class="files">
+        <a href="materials/koncepcia.pdf"><span class="book"><img src="assets/covers/koncepcia.webp" alt=""></span><strong>Пилотная территория «Чишмы»</strong><small>Концепция · PDF ↗</small></a>
+        <a href="materials/annotation.pdf"><span class="book"><img src="assets/covers/annotation.webp" alt=""></span><strong>Программа на одной странице</strong><small>Аннотация · PDF ↗</small></a>
+        <a href="materials/presentation.pdf"><span class="book"><img src="assets/covers/presentation.webp" alt=""></span><strong>Башкирское поле экспериментов</strong><small>Презентация · PDF ↗</small></a>
+        <a href="materials/programma.pdf"><span class="book"><img src="assets/covers/programma.webp" alt=""></span><strong>Полное описание программы</strong><small>Проект · PDF ↗</small></a>
+      </div>
+    </section>
+    <section id="company" class="company page-section"><div><h2>О компании</h2><p>Реквизиты ООО «Мироселье»</p></div><dl><div><dt>Наименование</dt><dd>ООО «Мироселье»</dd></div><div><dt>ИНН</dt><dd>0276185285</dd></div><div><dt>ОГРН</dt><dd>1250200037230</dd></div><div><dt>Электронная почта</dt><dd><a href="mailto:miroselye@mail.ru">miroselye@mail.ru</a></dd></div></dl></section>
   </main>
-
-  <footer class="foot"><div class="wrap"><span>ООО «Мироселье»</span><span>Республика Башкортостан</span><a href="#top">Наверх ↑</a></div></footer>
-
+  <footer><a class="wordmark" href="#top">Мироселье</a><a href="mailto:miroselye@mail.ru">Написать в проектный офис ↗</a></footer>
 </body>
-
 </html>
+
+
+
+
 

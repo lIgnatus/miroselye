@@ -6,24 +6,29 @@
   <meta name="theme-color" content="#f6f4e9">
   <title>Башкирское поле экспериментов | Мироселье</title>
   <link rel="stylesheet" href="site.css">
-  <script defer src="site.js"></script>
+  <link rel="stylesheet" href="atlas-interior.css"><script defer src="site.js"></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">К содержанию</a>
-  <header class="mast wrap">
-    <a class="brand" href="index.html" aria-label="Мироселье, на главную"><span class="sign" aria-hidden="true"></span><span>Сельские проекты<br>в Башкортостане</span></a>
-    <nav aria-label="Основная навигация"><a href="index.html#company">О компании</a><a href="index.html#projects">Проекты</a><a href="index.html#materials">Материалы</a></nav>
-    <a class="nav-action" href="index.html#participate">Как участвовать <span aria-hidden="true">↘</span></a>
-    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">Меню <span aria-hidden="true">≡</span></button>
+  <header class="atlas-header">
+    <div class="atlas-header-inner">
+      <a class="atlas-wordmark" href="index.html" aria-label="Мироселье, на главную">Мироселье</a>
+      <nav aria-label="Разделы проектного офиса">
+        <a href="index.html#mission">Миссия</a>
+        <a href="index.html#projects">Проекты</a>
+        <a href="index.html#team">Команда</a>
+        <a href="index.html#library">Материалы</a>
+        <a href="index.html#company">О компании</a>
+      </nav>
+    </div>
   </header>
-  <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Мобильная навигация" hidden><a href="index.html#company">О компании</a><a href="index.html#projects">Проекты</a><a href="index.html#materials">Материалы</a><a href="index.html#participate">Как участвовать</a></nav>
   <main id="main" class="article wrap">
     <a class="crumb" href="index.html#projects">← Все проекты</a>
-    <header class="article-head">
+    <header class="article-head"><div class="atlas-intro-copy">
       <h1>Башкирское поле экспериментов</h1>
       <p>Молодёжная программа по агротехнологиям для школьников 14–17 лет из посёлка Чишмы.</p>
       <span class="stamp">С 1 апреля по 31 октября 2027 года</span>
-    </header>
+    </div><img class="atlas-intro-image" src="design/fields-panorama.webp" alt="Пейзаж с полями и рекой из концепции Чишмов"></header>
     <section class="spread">
       <h2>Вызов для малых хозяйств</h2>
       <div><p class="standfirst">Небольшому хозяйству трудно конкурировать с агрохолдингом по цене и объёму поставок. Где фермер может получить больше от того, что уже выращивает и умеет?</p>
@@ -113,8 +118,23 @@
         <p>ООО «Мироселье» готовит Центр агрокреаномики «Дом фермера». В будущих мастерских в Верхних Термах ребята смогут вернуться к своей идее с наставником, испытать прототип и решить, что делать дальше.</p>
         <a class="doc-action" href="materials/programma.pdf">Открыть полное описание проекта в PDF <span aria-hidden="true">↗</span></a></div>
     </section>
-    <div class="back-row"><a class="back-link" href="index.html#participate">← К условиям участия</a></div>
+    <section id="participate" class="spread participate">
+
+      <div><h2>Как участвовать</h2><p>Программа в разработке. Выберите свою роль, чтобы узнать, какое участие мы предлагаем.</p></div>
+
+      <div class="roles">
+
+        <details id="schools"><summary>Школам <span aria-hidden="true"></span></summary><div><p>В апреле и мае 2027 года пройдут четыре вводные встречи в одной школе посёлка Чишмы. Из 200 школьников 14–17 лет отберём 30 заинтересованных ребят. В шести командах они выберут свои темы, освоят методы исследования и составят планы собственных проектов.</p><a class="text-link" href="#route">Посмотреть путь школьной команды <span aria-hidden="true">↗</span></a></div></details>
+
+        <details id="farmers"><summary>Аграриям <span aria-hidden="true"></span></summary><div><p>Хозяйство может принять ребят на выезде. Знакомство с производством, продажей продукции и повседневной работой даст школьникам материал для собственных вопросов. На 8 октября в Уфе запланирована Первая конференция по агрокреаномике Республики Башкортостан.</p><a class="text-link" href="#forum">О конференции <span aria-hidden="true">↗</span></a></div></details>
+
+        <details id="partners"><summary>Партнёрам <span aria-hidden="true"></span></summary><div><p>Вузы, технологические компании и эксперты могут предложить наставника, практикум или встречу с разработчиками. В концепции центра предусмотрено место для учебной и проектной работы.</p><a class="text-link" href="territory.html#idea">Изучить концепцию центра <span aria-hidden="true">↗</span></a></div></details>
+
+      </div>
+
+    </section>
+    <div class="back-row"><a class="back-link" href="index.html#projects">← Все проекты</a></div>
   </main>
-  <footer class="foot"><div class="wrap"><span>ООО «Мироселье»</span><span>Республика Башкортостан</span><a href="#top">Наверх ↑</a></div></footer>
+  <footer class="atlas-footer"><div class="wrap"><a href="index.html" class="atlas-wordmark">Мироселье</a><a href="index.html#projects">Все проекты ↗</a><a href="#top">Наверх ↑</a></div></footer>
 </body>
 </html>
