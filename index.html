@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f6f7f2">
   <title>Мироселье · Проектный офис сельских территорий Башкортостана</title>
-  <link rel="stylesheet" href="design/atlas-office.css">
-  <link rel="stylesheet" href="mission.css?v=panorama">
+  <link rel="stylesheet" href="design/atlas-office.css?v=portfolio">
+  <link rel="stylesheet" href="mission.css?v=portfolio">
   <script defer src="mission.js?v=panorama"></script>
   <meta name="description" content="Миссия «Мироселья» — заселять мир. Развитие сельских территорий через новые возможности для земли, креативные индустрии и работу с молодым поколением.">
   <link rel="canonical" href="https://lignatus.github.io/miroselye/">
@@ -38,13 +38,10 @@
     <section class="cover" id="mission" aria-labelledby="mission-title">
       <div class="cover-copy mission-heading">
         <h1 id="mission-title">Заселять <em>мир</em></h1>
-        <p>Так мы понимаем имя «Мироселье». Мы создали проектный офис, чтобы у людей было больше причин жить в селе, возвращаться домой и начинать здесь своё дело. Мы ищем, как лучше использовать землю и вернуть к жизни пустующие здания. Для этого объединяем опыт фермеров и мастеров с идеями молодого поколения.</p>
+        <p>Так мы понимаем имя «Мироселье». Мы создали проектный офис, чтобы у людей было больше причин жить в селе, возвращаться домой и начинать здесь своё дело. Мы ищем, как лучше использовать землю и вернуть к жизни пустующие здания. Для этого объединяем опыт фермеров и мастеров креативных индустрий.</p>
       </div>
       <div class="mission-panorama" data-mission>
-        <div class="foldout">
-          <img src="design/fields-panorama.webp" alt="Река среди полей и лесополос. На пригорке видны фермерские постройки." width="1672" height="341" fetchpriority="high">
-          <span class="folds" aria-hidden="true"></span>
-        </div>
+        <img class="panorama-background" src="design/fields-panorama.webp" alt="" width="1672" height="341" fetchpriority="high">
         <div class="mission-leaves">
           <div class="mission-choices" hidden aria-label="Ценности Мироселья">
             <button id="tab-earth" aria-controls="leaf-earth" type="button">Земля</button>
@@ -60,23 +57,20 @@
       </div>
     </section>
     <section id="projects" class="projects page-section">
-      <div class="section-line"><h2>Проекты</h2><p>Аграрная практика, образование и работа с жителями</p></div>
+      <div class="section-line"><h2>Проекты</h2></div>
       <div class="project-grid">
         <article class="project main-project">
-          <div class="project-info"><span class="project-location">Верхние Термы · Концепция</span><h3><a href="territory.html">Центр агрокреаномики</a></h3><p>Предлагаем открыть в бывшей школе мастерские. Здесь фермеры и молодые жители района смогут встречаться, обсуждать идеи и проверять их на практике.</p></div>
           <fieldset class="school-view">
             <legend class="sr-only">Вид бывшей школы в Верхних Термах</legend>
             <input type="radio" id="school-photo" name="school-view" checked><label for="school-photo">Здание сегодня</label>
             <input type="radio" id="school-design" name="school-view"><label for="school-design">Проектный эскиз</label>
             <div class="school-images"><img class="actual" src="assets/school-facade.webp" alt="Фасад бывшей школы в Верхних Термах"><img class="proposal" src="assets/school-concept.webp" alt="Проектный эскиз центра в здании бывшей школы"></div>
           </fieldset>
+          <div class="project-info"><span class="project-location">Верхние Термы · Концепция</span><h3><a href="territory.html">Центр агрокреаномики</a></h3><p>Предлагаем открыть в бывшей школе мастерские. Здесь фермеры и молодые жители района смогут встречаться, обсуждать идеи и проверять их на практике.</p></div>
           <a class="read-project" href="territory.html">Посмотреть концепцию <span aria-hidden="true">↗</span></a>
         </article>
-        <div class="sibling-projects">
-          <a class="project side-project field-program-card" href="program.html"><img src="assets/program-grain.webp" alt=""><div class="project-info"><span>Чишмы · Проект для конкурса ПФКИ</span><h3>Башкирское поле экспериментов</h3><p>В программе молодые жители Чишмов смогут подготовить собственный бизнес-план или замысел исследования.</p><i aria-hidden="true">↗</i></div></a>
-          <a class="project side-project urban-method-card" href="urbanschool.html"><img src="assets/urban-method-tile.webp" alt="Урбаншкола Уфа"><div class="project-info"><span>Уфа · Методика развития пространственного мышления</span><h3>Урбаншкола</h3><p>Школьники рисуют карты по памяти, сравнивают маршруты и обсуждают, как меняется знакомое место.</p><i aria-hidden="true">↗</i></div></a>
-          <a class="project side-project" href="living-streets.html"><img src="assets/streets-barn.webp" alt="Общественный амбар в концепции посёлка"><div class="project-info"><span>Кушнаренковский район · Предварительная концепция</span><h3>Живые улицы</h3><p>Концепция ремесленного посёлка. Дом и мастерская выходят на одну улицу, а в общем амбаре можно проводить ярмарки.</p><i aria-hidden="true">↗</i></div></a>
-        </div>
+        <a class="project side-project field-program-card" href="program.html"><img src="assets/program-grain.webp" alt=""><div class="project-info"><span>Чишмы · Проект для конкурса ПФКИ</span><h3>Башкирское поле экспериментов</h3><p>В программе молодые жители Чишмов смогут подготовить собственный бизнес-план или замысел исследования.</p><i aria-hidden="true">↗</i></div></a>
+        <a class="project side-project" href="living-streets.html"><img src="assets/streets-barn.webp" alt="Общественный амбар в концепции посёлка"><div class="project-info"><span>Кушнаренковский район · Предварительная концепция</span><h3>Живые улицы</h3><p>Концепция ремесленного посёлка. Дом и мастерская выходят на одну улицу, а в общем амбаре можно проводить ярмарки.</p><i aria-hidden="true">↗</i></div></a>
       </div>
     </section>
     <section id="team" class="team page-section"><div class="section-line"><h2>Команда</h2><p>Пока представлены роли участников будущей команды.</p></div>
@@ -87,12 +81,11 @@
       </div>
     </section>
     <section id="library" class="library page-section">
-      <div><h2>Материалы</h2><p>Концепция территории и документы молодёжной программы.</p></div>
+      <h2>Материалы</h2>
       <div class="files">
-        <a href="materials/koncepcia.pdf"><span class="book"><img src="assets/covers/koncepcia.webp" alt="" loading="lazy"></span><strong>Пилотная территория «Чишмы»</strong><small>Концепция · PDF ↗</small></a>
-        <a href="materials/annotation.pdf"><span class="book"><img src="assets/covers/annotation.webp" alt="" loading="lazy"></span><strong>Программа на одной странице</strong><small>Аннотация · PDF ↗</small></a>
-        <a href="materials/presentation.pdf"><span class="book"><img src="assets/covers/presentation.webp" alt="" loading="lazy"></span><strong>Башкирское поле экспериментов</strong><small>Презентация · PDF ↗</small></a>
-        <a href="materials/programma.pdf"><span class="book"><img src="assets/covers/programma.webp" alt="" loading="lazy"></span><strong>Полное описание программы</strong><small>Проект · PDF ↗</small></a>
+        <a href="materials/koncepcia.pdf"><span class="book"><img src="assets/covers/koncepcia.webp" alt="" loading="lazy"><span class="book-open" aria-hidden="true">↗</span></span><strong>Пилотная территория агрокреаномики «Чишмы»</strong><small>Презентация · 11 с. · PDF</small></a>
+        <a href="materials/presentation.pdf"><span class="book"><img src="assets/covers/presentation.webp" alt="" loading="lazy"><span class="book-open" aria-hidden="true">↗</span></span><strong>Башкирское поле экспериментов</strong><small>Презентация проекта ПФКИ · 16 с. · PDF</small></a>
+        <a href="materials/living-streets.pdf"><span class="book"><img src="assets/covers/living-streets.webp" alt="" loading="lazy"><span class="book-open" aria-hidden="true">↗</span></span><strong>Живые улицы</strong><small>Кушнаренковский район · Концепция мастер-плана · PDF · 27,6 МБ</small></a>
       </div>
     </section>
     <section id="company" class="company page-section"><div><h2>О компании</h2><p>Реквизиты ООО «Мироселье»</p></div><dl><div><dt>Наименование</dt><dd>ООО «Мироселье»</dd></div><div><dt>ИНН</dt><dd>0276185285</dd></div><div><dt>ОГРН</dt><dd>1250200037230</dd></div><div><dt>Электронная почта</dt><dd><a href="mailto:miroselye@mail.ru">miroselye@mail.ru</a></dd></div></dl></section>
