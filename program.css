@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Program Oswald";
+  src: url("assets/program-oswald-cyrillic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 650;
+  font-display: swap;
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+
+.article {
+  --print-red: #a72e24;
+  --print-ink: #29251e;
+  --print-cream: #faedcc;
+  --print-rule: #cfc8b6;
+  --display: "Program Oswald", var(--sans);
+  color: var(--print-ink);
+  padding-top: 10px;
+}
+.article .crumb { margin-bottom: 8px; }
+.field-poster {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  background: var(--print-cream);
+  isolation: isolate;
+}
+.poster-copy {
+  min-width: 0;
+  container-type: inline-size;
+  padding: clamp(26px,3.5vw,56px) clamp(24px,4.7vw,76px);
+}
+.poster-location, .poster-date {
+  font: 580 13px/1.35 var(--sans);
+  color: #64533c;
+}
+.field-poster h1 {
+  margin: clamp(26px,3.8vw,56px) 0 clamp(18px,2.1vw,32px);
+  font: 650 clamp(32px,12.1cqi,84px)/1.04 var(--display);
+  letter-spacing: -.048em;
+  text-transform: uppercase;
+}
+.field-poster h1 span, .field-poster h1 em { display: block; }
+.field-poster h1 em {
+  color: var(--print-red);
+  font-size: 1.76em;
+  line-height: .99;
+  font-style: normal;
+  margin-block: .015em .045em;
+}
+.field-poster .poster-intro {
+  max-width: 33ch;
+  font-size: clamp(16px,1.42vw,22px);
+  line-height: 1.42;
+  letter-spacing: -.018em;
+}
+.field-poster .poster-date { margin-top: clamp(20px,2.65vw,42px); }
+.poster-art { position: relative; min-width: 0; }
+.poster-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: 52% 60%;
+}
+.program-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0 clamp(16px,2.8vw,44px);
+  padding-inline: clamp(12px,3vw,52px);
+  background: var(--print-ink);
+  color: #fff4d9;
+}
+.program-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  min-height: 50px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.program-nav a:hover { text-decoration: underline; }
+.program-nav a:focus-visible { outline-color: #eeb947; outline-offset: -2px; }
+.program-nav .presentation-link { margin-inline-start: auto; color: #ffd679; }
+.presentation-link small { font-size: .76em; }
+.article .spread {
+  grid-template-columns: minmax(0,.82fr) minmax(0,1.35fr);
+  column-gap: clamp(38px,6vw,108px);
+  padding: clamp(38px,5vw,75px) clamp(12px,3vw,52px);
+  border-color: var(--print-rule);
+}
+.article .spread h2 {
+  max-width: 19ch;
+  color: var(--print-ink);
+  font: 650 clamp(29px,3.35vw,53px)/1.1 var(--display);
+  letter-spacing: -.028em;
+}
+.article .spread p { max-width: 64ch; }
+.article .standfirst {
+  font: 460 clamp(22px,2.05vw,33px)/1.22 var(--serif);
+  letter-spacing: -.023em;
+}
+.station-figure { margin: 26px 0 0; max-width: 355px; }
+.station-figure img { width: 100%; height: auto; }
+.station-figure figcaption { margin-top: 6px; color: #605846; font-size: 13px; }
+.article .program-goal {
+  background: #a52e24;
+  color: #fff3d8;
+  border: 0;
+}
+.article .program-goal h2 { color: #fff3d8; }
+.program-goal .standfirst strong {
+  display: inline-block;
+  margin-bottom: 12px;
+  font: 600 13px/1.3 var(--sans);
+}
+.article #calendar { background: #f1ead8; }
+.article details { border-color: var(--print-rule); }
+.article summary span { border-color: #aca18e; }
+.article summary:hover span { background: #ecd5a5; }
+.article .timeline strong, .article .text-link { color: #903524; }
+.article .doc-action {
+  color: #fff5e2;
+  background: var(--print-red);
+  border-color: var(--print-red);
+}
+.article .doc-action:hover { background: #70221d; }
+@media (max-width: 730px) {
+  .field-poster { grid-template-columns: 1.55fr 1fr; }
+  .poster-copy { padding: 24px; }
+  .field-poster h1 {
+    font-size: 12.5cqi;
+    margin-block: 24px 20px;
+  }
+  .article .spread { padding-inline: 12px; }
+  .article .program-goal, .article #calendar { padding-inline: 22px; }
+  .article .spread h2 { max-width: 22ch; }
+  .article .history > div+div { margin-top: 22px; }
+  .station-figure { margin-top: 14px; }
+  .program-nav { gap: 0 16px; }
+  .program-nav a { font-size: 13px; }
+}
+@media (max-width: 540px) {
+  .field-poster {
+    grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+    container-type: inline-size;
+  }
+  .poster-copy { display: contents; }
+  .poster-location { grid-column: 1; grid-row: 1; padding: 20px 0 0 16px; }
+  .field-poster h1 {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 7.4cqi;
+    margin: 17px 0 19px 15px;
+    align-self: center;
+  }
+  .poster-art { grid-column: 2; grid-row: 1/3; min-height: clamp(145px,47cqi,220px); }
+  .field-poster .poster-intro { grid-column: 1/-1; padding: 15px 16px 0; }
+  .field-poster .poster-date { grid-column: 1/-1; margin: 0; padding: 12px 16px 18px; }
+  .poster-location, .field-poster .poster-date { font-size: 12px; }
+  .program-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; padding: 4px 16px; }
+  .program-nav .presentation-link { margin-inline-start: 0; }
+  .program-nav a { min-height: 40px; }
+  .article .spread { padding-inline: 0; }
+  .article .program-goal, .article #calendar { padding-inline: 16px; }
+}

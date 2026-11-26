@@ -1,10 +1,8 @@
-// Atlas outlines derived from the public-domain Natural Earth 1:110m land dataset.
 const atlas = document.querySelector('[data-mission]');
 if (atlas) {
   const list = atlas.querySelector('.mission-choices');
   const tabs = [...list.querySelectorAll('button')];
   const pages = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-  const globe = atlas.querySelector('.mission-globe img');
   let selected = 0;
   function selectPage(index, moveFocus = false) {
     selected = (index + tabs.length) % tabs.length;
@@ -15,12 +13,6 @@ if (atlas) {
       pages[i].hidden = !active;
       pages[i].classList.toggle('show-leaf', active);
     });
-    const nextImage = 'assets/mission-' + pages[selected].dataset.globe + '.webp';
-    if (globe.getAttribute('src') !== nextImage) {
-      globe.src = nextImage;
-      globe.classList.remove('turn');
-      requestAnimationFrame(() => globe.classList.add('turn'));
-    }
     if (moveFocus) tabs[selected].focus();
   }
   list.setAttribute('role', 'tablist');
