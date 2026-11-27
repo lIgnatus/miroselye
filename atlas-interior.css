@@ -84,3 +84,6 @@ body { font-size: 16px; }
 .participate .roles summary {font-size:clamp(20px,1.9vw,26px);min-height:54px;}
 .participate summary span {width:26px;height:26px;}
 .participate summary:hover span {background:#e3e8fd;}
+
+.center-illustration { margin:0; }
+.center-illustration figcaption { color:var(--sub); font-size:12px; margin-top:5px; }
